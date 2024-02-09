@@ -7,7 +7,7 @@
 <section class="relative bg-primary-500 lg:h-[calc(100vh-104px)] ">
   <div class="max-w-7xl mx-auto h-full px-4 7xl:px-0">
     <div class="grid grid-cols-1  lg:grid-cols-2 h-full">
-      <div class="flex flex-col justify-center py-10">
+      <div class="flex flex-col justify-center py-10 pr-6 lg:pr-0">
         <div class="block bg-accent-600 text-white w-fit py-2 px-4 mb-2">
           Welcome! I'M
         </div>

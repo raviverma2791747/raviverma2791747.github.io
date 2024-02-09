@@ -1,4 +1,5 @@
 <script>
+  let innnerWidth;
   let experiences = [
     {
       title: "Software Engineer",
@@ -25,20 +26,29 @@
       date: "2018 - Present",
     },
   ];
-  const MAX_EXPERIENCE_ROW = 4;
+  let MAX_EXPERIENCE_ROW = 4;
+  $: {
+    if (innnerWidth < 1024) {
+      MAX_EXPERIENCE_ROW = 2;
+    } else {
+      MAX_EXPERIENCE_ROW = 4;
+    }
+  }
 </script>
 
+<svelte:window bind:innerWidth={innnerWidth} />
+
 <section class="bg-secondary py-8">
-  <div class="max-w-7xl mx-auto px-4 7xl:px-0" >
+  <div class="max-w-7xl mx-auto px-4 7xl:px-0">
     <h1 class="text-white text-3xl font-semibold mb-8">My Experience</h1>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-4">
       {#each experiences as experience, index}
-        <div class="flex flex-col h-80">
+        <div class="flex flex-col h-96 lg:h-80">
           {#if index % 2 == 0}
             <div class="h-[40%] border-l border-accent-500 p-4 relative">
               <div class="w-4/5">
                 <div>
-                  <h2 class="text-white text-2xl font-semibold">
+                  <h2 class="text-white text-xl lg:text-2xl font-semibold">
                     {experience.title}
                   </h2>
                   <p class="text-white text-sm">
@@ -60,7 +70,7 @@
           <div class="h-[20%] flex items-center">
             <div class="w-4/5 flex">
               <div
-                class=" text-white flex items-center font-semibold text-lg ps-4 bg-accent-500 h-8 grow"
+                class=" text-white flex items-center font-semibold text-xs lg:text-lg ps-4 bg-accent-500 h-8 grow"
               >
                 {experience.date}
               </div>
@@ -72,7 +82,7 @@
           </div>
           {#if index % 2 == 1}
             <div class="h-[40%] border-l border-accent-500 p-4 relative">
-              <h2 class="text-white text-2xl font-semibold">
+              <h2 class="text-white text-xl lg:text-2xl font-semibold">
                 {experience.title}
               </h2>
               <p class="text-white text-sm">
@@ -102,4 +112,14 @@
     border-left: 32px solid #d6223b;
     border-bottom: 16px solid transparent;
   }
+
+  /* @media (max-width: 768px) {
+    .triangle-right {
+      width: 0px;
+    height: 0px;
+    border-top: 20px solid transparent;
+    border-left: 40px solid #d6223b;
+    border-bottom: 20px solid transparent;
+    }
+  } */
 </style>

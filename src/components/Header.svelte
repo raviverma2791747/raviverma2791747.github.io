@@ -1,5 +1,27 @@
 <script>
+  import CloseIcon from "./svg/CloseIcon.svelte";
   import HamburgermenuIcon from "./svg/HamburgermenuiIcon.svelte";
+
+  let isMenuOpen = false;
+
+  let nav = [
+    {
+      title: "About Me",
+      link: "#about",
+    },
+    {
+      title: "Services",
+      link: "#services",
+    },
+    {
+      title: "Portfolio",
+      link: "#portfolio",
+    },
+    {
+      title: "Contact",
+      link: "#contact",
+    },
+  ];
 </script>
 
 <header class="bg-primary-500 text-white">
@@ -10,23 +32,36 @@
       >Ravi Verma</a
     >
     <nav class="lg:flex items-center gap-8 hidden">
-      <a href="#about">About Me</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
+      {#each nav as item}
+        <a href={item.link}>{item.title}</a>
+      {/each}
     </nav>
     <!-- <button class="bg-accent-500 text-white px-4 py-2 rounded"
       >Download CV</button
     > -->
-    <button class="text-accent-500 lg:hidden"><HamburgermenuIcon /></button>
+    <button
+      on:click={() => (isMenuOpen = !isMenuOpen)}
+      class="text-accent-500 lg:hidden"><HamburgermenuIcon /></button
+    >
   </div>
 </header>
 
-<div class="fixed top-0 left-0 bg-accent-500 z-50 h-screen w-screen">
-  <nav class="flex flex-col items-center gap-8 justify-center h-full text-white text-lg">
-    <a href="#about">About Me</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</div>
+{#if isMenuOpen}
+  <div class="fixed top-0 left-0 bg-accent-500 z-50 h-screen w-screen">
+    <div
+      class="absolute top-0 right-0 p-4 text-white cursor-pointer"
+      on:click={() => (isMenuOpen = false)}
+    >
+      <CloseIcon />
+    </div>
+    <nav
+      class="flex flex-col items-center gap-8 justify-center h-full text-white text-lg"
+    >
+      {#each nav as item}
+        <a on:click={() => (isMenuOpen = false)} href={item.link}
+          >{item.title}</a
+        >
+      {/each}
+    </nav>
+  </div>
+{/if}
