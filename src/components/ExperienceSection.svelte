@@ -25,6 +25,7 @@
       location: "Mountain View, CA",
       date: "2018 - Present",
     },
+    
   ];
   let MAX_EXPERIENCE_ROW = 4;
   $: {
@@ -76,7 +77,12 @@
               </div>
               <div class="triangle-right"></div>
             </div>
-            {#if (index == 0 && experiences.length != 1) || (experiences.length - 1 != index && index % (MAX_EXPERIENCE_ROW - 1) != 0)}
+            {#if experiences.length  === 1}
+
+            {:else if (index +1 ) % MAX_EXPERIENCE_ROW  == 0 }
+
+            {:else if index === experiences.length - 1}
+            {:else}
               <div class="bg-accent-500 h-[1px] w-1/5"></div>
             {/if}
           </div>
