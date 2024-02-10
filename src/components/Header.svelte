@@ -1,6 +1,7 @@
 <script>
   import CloseIcon from "./svg/CloseIcon.svelte";
   import HamburgermenuIcon from "./svg/HamburgermenuiIcon.svelte";
+  import { person_info_store } from "../helper/store";
 
   let isMenuOpen = false;
 
@@ -29,7 +30,7 @@
     class="max-w-7xl mx-auto flex items-center gap-8 py-4 lg:py-8 px-4 7xl:px-0"
   >
     <a href="/" class="block text-accent-500 text-2xl font-semibold mr-auto"
-      >Ravi Verma</a
+      >{$person_info_store.name}</a
     >
     <nav class="lg:flex items-center gap-8 hidden">
       {#each nav as item}

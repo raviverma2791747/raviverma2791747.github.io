@@ -1,4 +1,5 @@
 <script>
+  import { projects_store } from "../helper/store";
   import ArrowRightIcon from "./svg/ArrowRightIcon.svelte";
 
   let arrs = [
@@ -63,7 +64,7 @@
       </button>
     </div>
     <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4">
-      {#each arrs as arr}
+      {#each $projects_store as project}
         <div class="aspect-[4/2] sm:aspect-square bg-white rounded-lg cursor-pointer relative">
           <div
             class="p-4 opacity-0 hover:opacity-100 bg-accent-500 absolute top-0 left-0 w-full h-full rounded-lg flex items-center"

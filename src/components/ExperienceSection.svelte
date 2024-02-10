@@ -1,32 +1,8 @@
 <script>
+  import { experience_store } from "../helper/store";
+
   let innnerWidth;
-  let experiences = [
-    {
-      title: "Software Engineer",
-      company: "Google",
-      location: "Mountain View, CA",
-      date: "2018 - Present",
-    },
-    {
-      title: "Software Engineer",
-      company: "Google",
-      location: "Mountain View, CA",
-      date: "2018 - Present",
-    },
-    {
-      title: "Software Engineer",
-      company: "Google",
-      location: "Mountain View, CA",
-      date: "2018 - Present",
-    },
-    {
-      title: "Software Engineer",
-      company: "Google",
-      location: "Mountain View, CA",
-      date: "2018 - Present",
-    },
-    
-  ];
+
   let MAX_EXPERIENCE_ROW = 4;
   $: {
     if (innnerWidth < 1024) {
@@ -43,7 +19,7 @@
   <div class="max-w-7xl mx-auto px-4 7xl:px-0">
     <h1 class="text-white text-3xl font-semibold mb-8">My Experience</h1>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-4">
-      {#each experiences as experience, index}
+      {#each $experience_store as experience, index}
         <div class="flex flex-col h-96 lg:h-80">
           {#if index % 2 == 0}
             <div class="h-[40%] border-l border-accent-500 p-4 relative">
@@ -77,12 +53,7 @@
               </div>
               <div class="triangle-right"></div>
             </div>
-            {#if experiences.length  === 1}
-
-            {:else if (index +1 ) % MAX_EXPERIENCE_ROW  == 0 }
-
-            {:else if index === experiences.length - 1}
-            {:else}
+            {#if $experience_store.length === 1}{:else if (index + 1) % MAX_EXPERIENCE_ROW == 0}{:else if index === $experience_store.length - 1}{:else}
               <div class="bg-accent-500 h-[1px] w-1/5"></div>
             {/if}
           </div>
