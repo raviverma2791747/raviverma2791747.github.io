@@ -19,6 +19,10 @@
       link: "#portfolio",
     },
     {
+      title: "Skills",
+      link: "#skill",
+    },
+    {
       title: "Contact",
       link: "#contact",
     },

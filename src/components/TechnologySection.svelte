@@ -20,7 +20,7 @@
   import PostgresIcon from "./svg/PostgresIcon.svelte";
 </script>
 
-<section class="bg-primary-500">
+<section id="skill" class="bg-primary-500">
   <div class="max-w-7xl mx-auto pt-10 pb-10 px-4 7xl:px-0">
     <h1 class="text-white text-3xl font-semibold mb-8">
       Skills & Technologies

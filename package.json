@@ -23,6 +23,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"nodemailer": "^6.9.9"
+		"nodemailer": "^6.9.9",
+		"svelte-inview": "^4.0.2",
+		"tailwindcss-animated": "^1.0.1"
 	}
 }

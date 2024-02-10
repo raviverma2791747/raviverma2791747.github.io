@@ -34,7 +34,7 @@
   let tabs = ["Personal Project", "Client Project", "All Work"];
 </script>
 
-<section class="bg-primary-500">
+<section id="portfolio" class="bg-primary-500">
   <div class="max-w-7xl mx-auto pt-10 pb-16 px-4 7xl:px-0">
     <h1 class="text-white text-3xl font-semibold mb-8">Portfolio</h1>
     <div class="flex mb-5">
@@ -65,7 +65,9 @@
     </div>
     <div class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4">
       {#each $projects_store as project}
-        <div class="aspect-[4/2] sm:aspect-square bg-white rounded-lg cursor-pointer relative">
+        <div class="aspect-[4/2] sm:aspect-square bg-white rounded-lg cursor-pointer relative hover:animate-fade hover:animate-once hover:animate-duration-1000">
+          <img src={project.img} alt={project.title} class="w-full h-full object-cover rounded-lg" />
+          
           <div
             class="p-4 opacity-0 hover:opacity-100 bg-accent-500 absolute top-0 left-0 w-full h-full rounded-lg flex items-center"
           >

@@ -1,5 +1,6 @@
 <script>
   import { experience_store } from "../helper/store";
+  import AnimatedComponent from "./AnimatedComponent.svelte";
 
   let innnerWidth;
 
@@ -18,11 +19,12 @@
 <section class="bg-secondary py-8">
   <div class="max-w-7xl mx-auto px-4 7xl:px-0">
     <h1 class="text-white text-3xl font-semibold mb-8">My Experience</h1>
+    <AnimatedComponent>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-4">
       {#each $experience_store as experience, index}
         <div class="flex flex-col h-96 lg:h-80">
           {#if index % 2 == 0}
-            <div class="h-[40%] border-l border-accent-500 p-4 relative">
+            <div class="h-[40%] border-l border-accent-500 p-4 relative animate-flip-up animate-once">
               <div class="w-4/5">
                 <div>
                   <h2 class="text-white text-xl lg:text-2xl font-semibold">
@@ -45,7 +47,7 @@
           {:else}
             <div class="h-[40%]"></div>
           {/if}
-          <div class="h-[20%] flex items-center">
+          <div class="h-[20%] flex items-center animate-fade-right animate-once">
             <div class="w-4/5 flex">
               <div
                 class=" text-white flex items-center font-semibold text-xs lg:text-lg ps-4 bg-accent-500 h-8 grow"
@@ -59,7 +61,7 @@
             {/if}
           </div>
           {#if index % 2 == 1}
-            <div class="h-[40%] border-l border-accent-500 p-4 relative">
+            <div class="h-[40%] border-l border-accent-500 p-4 relative animate-flip-down animate-once">
               <h2 class="text-white text-xl lg:text-2xl font-semibold">
                 {experience.title}
               </h2>
@@ -80,6 +82,7 @@
         </div>
       {/each}
     </div>
+  </AnimatedComponent>
   </div>
 </section>
 

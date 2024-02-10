@@ -3,7 +3,7 @@ import { writable } from "svelte/store";
 export const person_info_store = writable({
   name: "Ravi Verma",
   title: "Software Engineer",
-  desc: "I'm a Front-End Developer with a passion for creating beautiful and functional web applications.",
+  desc: "I'm a software engineer with a passion for creating beautiful and functional web applications. I love exploring new ideas and bringing them to life.",
 });
 
 export const social_store = writable({
@@ -25,7 +25,7 @@ export const stat_store = writable([
     unit: "Internships",
   },
   {
-    count: "10+",
+    count: 6,
     unit: "Projects",
   },
   {
@@ -37,35 +37,35 @@ export const stat_store = writable([
 export const experience_store = writable([
   {
     title: "Fontend Web Developer",
-    type : "Internship",
+    type: "Internship",
     company: "Helpy Moto",
     location: "India",
     date: "June 2021 - August 2021",
   },
   {
     title: "Frontend Web Developer",
-    type : "Internship",
+    type: "Internship",
     company: "Roamhome",
     location: "India",
     date: "Feb 2022 - June 2022",
   },
   {
     title: "Frontend Web Developer",
-    type : "Internship",
+    type: "Internship",
     company: "Roamhome",
     location: "India",
     date: "Aug 2022 - Dec 2022",
   },
   {
     title: "Frontend Engineer",
-    type : "Full-time",
+    type: "Full-time",
     company: "Roamhome",
     location: "India",
     date: "Dec 2022 - Jan 2023",
   },
   {
     title: "Software Engineer",
-    type : "Internship",
+    type: "Internship",
     company: "uTrade Solutions",
     location: "Chandigarh, India",
     date: "Jan 2023 - June 2023",
@@ -108,6 +108,20 @@ export const projects_store = writable([
     url: "https://github.com/raviverma2791747/Quiz-Application",
     tech: ["Tkinter", "SQLite", "Python", "Json"],
   },
+  {
+    title: "Landing page for Lavange Pvt. Ltd.",
+    desc: "This project is a responsive landing page for Lavange Pvt. Ltd. The project is built using HTML, CSS, JavaScript, Bootstrap, Tailwind ReactJS, NextJS, SvelteKit. or Angular.",
+    url: "https://lavange.in",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "ReactJS", "NextJS", "SvelteKit", "Angular"],
+    img: "assets/images/projects/lavange.png",
+  },
+  {
+    title: "Businness page for Sunrisers Media Group",
+    desc: "This project is a responsive landing page for Sunrisers Media Group. The project is built using HTML, CSS, JavaScript, Bootstrap, Tailwind ReactJS, NextJS, SvelteKit. or Angular.",
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "ReactJS", "NextJS", "SvelteKit", "Angular"],
+    url: "https://www.sunrisersmediagroup.com/",
+    img: "assets/images/projects/sunrisersmediagroup.png",
+  }
 ]);
 
 export const services_store = writable([
@@ -134,5 +148,5 @@ export const services_store = writable([
     desc: "I will provide consulting services to help you with your website development.",
     price: "100$/hour",
     price_desc: "Additional charges may apply",
-  }
+  },
 ]);

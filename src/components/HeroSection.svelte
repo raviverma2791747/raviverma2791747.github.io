@@ -25,7 +25,7 @@
           class="z-10 absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] rounded-full bg-accent-500 w-64 h-64"
         ></div> -->
         <div class="aspect-auto h-full">
-          <img class=" h-full mx-auto" alt="img" src="assets/images/img.png" />
+          <img class=" h-full mx-auto animate-fade-up" alt="img" src="assets/images/hero.png" />
         </div>
       </div>
     </div>
