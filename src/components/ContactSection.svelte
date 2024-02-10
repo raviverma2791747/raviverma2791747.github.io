@@ -2,10 +2,12 @@
   import WhatsappIcon from "./svg/WhatsappIcon.svelte";
   import { social_store } from "../helper/store";
   import EnvelopeIcon from "./svg/EnvelopeIcon.svelte";
+
+  export let form;
 </script>
 
-<section class="bg-primary-500">
-  <div class="max-w-7xl mx-auto py-32 px-4 7xl:px-0">
+<section id="contact" class="bg-primary-500">
+  <div class="max-w-7xl mx-auto py-20 px-4 7xl:px-0">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <div class="col-span-1">
         <h1 class="text-white text-3xl font-semibold">Contact</h1>
@@ -49,7 +51,7 @@
       </div>
       <div class="col-span-1">
         <h1 class="text-white text-3xl font-semibold mb-8">Drop a Line</h1>
-        <form>
+        <form method="POST">
           <div class="grid grid-cols-2 mb-8 gap-6">
             <div>
               <input
@@ -72,11 +74,12 @@
           </div>
           <div class="mb-6">
             <textarea
+              name="message"
               placeholder="Message"
               class="border border-gray-500 rounded bg-primary-500 text-white w-full p-4 outline-none focus:border-accent-500 focus:border-2"
             />
           </div>
-          <button class="bg-accent-500 text-white px-10 py-3 rounded mt-4">
+          <button type="submit" class="bg-accent-500 text-white px-10 py-3 rounded mt-4">
             Submit
           </button>
         </form>

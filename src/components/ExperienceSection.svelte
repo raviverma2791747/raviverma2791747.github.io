@@ -28,6 +28,7 @@
                   <h2 class="text-white text-xl lg:text-2xl font-semibold">
                     {experience.title}
                   </h2>
+                  <p class="text-white text-sm">{experience.type}</p>
                   <p class="text-white text-sm">
                     {experience.company} - {experience.location}
                   </p>
@@ -62,6 +63,7 @@
               <h2 class="text-white text-xl lg:text-2xl font-semibold">
                 {experience.title}
               </h2>
+              <p class="text-white text-sm">{experience.type}</p>
               <p class="text-white text-sm">
                 {experience.company} - {experience.location}
               </p>

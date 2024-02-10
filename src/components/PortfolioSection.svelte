@@ -71,11 +71,11 @@
           >
             <div>
               <h2 class="text-white lg:text-xl font-semibold">
-                Application Development
+                {project.title}
               </h2>
-              <p class="text-white lg:text-sm">Ravi Verma</p>
-              <p class="text-white lg:text-sm mb-6">Lorem ipsum dolor sit amet</p>
-              <a href="/" class="bg-white inline-flex gap-2 text-black text-sm px-2 lg:px-8  py-2"
+              <p class="text-white lg:text-sm">{project.tech.join(", ")}</p>
+              <p class="text-white lg:text-sm mb-6">{project.desc}</p>
+              <a href={project.url} class="bg-white inline-flex gap-2 text-black text-sm px-2 lg:px-8  py-2" target="_blank"
                 >View Project <ArrowRightIcon/></a
               >
             </div>

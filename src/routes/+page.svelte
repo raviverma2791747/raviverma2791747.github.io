@@ -4,10 +4,14 @@
   import HeroSection from "../components/HeroSection.svelte";
   import StatSection from "../components/StatSection.svelte";
   import PortfolioSection from "../components/PortfolioSection.svelte";
+  import TechnologySection from "../components/TechnologySection.svelte";
+  import ServiceSection from "../components/ServiceSection.svelte";
 </script>
 
 <HeroSection />
 <StatSection />
 <PortfolioSection/>
 <ExperienceSection />
+<TechnologySection/>
+<ServiceSection/>
 <ContactSection />
