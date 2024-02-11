@@ -25,7 +25,7 @@ export const stat_store = writable([
     unit: "Internships",
   },
   {
-    count: 6,
+    count: 7,
     unit: "Projects",
   },
   {
@@ -38,14 +38,12 @@ export const stat_store = writable([
 export const education_store = writable([
   {
     title: "Student 1st to 10th",
-    type: "Full-time",
     company: "Kendriya Vidyalaya Sector 31",
     location: "Chandigarh, India",
     date: "April 2006 - March 2016",
   },
   {
     title: "Student 11th, 12th",
-    type: "Full-time",
     company: "Kendriya Vidyalaya Sector 31",
     location: "Chandigarh, India",
     specialization: "Physics, Chemistry, Maths and Computer Science",
@@ -53,10 +51,9 @@ export const education_store = writable([
   },
   {
     title: "Student",
-    type: "Full-time",
     company: "Chandigarh College of Engineering and Technology",
     location: "Chandigarh, India",
-    specialization: "Computer Science Engineering",
+    specialization: "B.E. Computer Science Engineering",
     date: "July 2019 - June 2023",
   },
 ])

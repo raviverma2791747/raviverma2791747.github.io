@@ -38,7 +38,7 @@
       {#if active_tab == 0}
         {#each $projects_store as project, index}
           <div
-            class="aspect-[4/2] sm:aspect-square bg-white rounded-lg cursor-pointer relative hover:animate-fade hover:animate-once hover:animate-duration-1000"
+            class="aspect-[4/3] sm:aspect-square bg-white rounded-lg cursor-pointer relative hover:animate-fade hover:animate-once hover:animate-duration-1000"
           >
             <img
               src={project.img}
@@ -75,7 +75,7 @@
         {/each}
       {:else if active_tab == 1}
         {#each $certificates_store as certificate, index}
-          <div class="aspect-[4/2] sm:aspect-square rounded-lg cursor-pointer">
+          <div class="aspect-[4/3] sm:aspect-square rounded-lg cursor-pointer">
             <!-- <img
               src={certificate.img}
               alt={certificate.title}
@@ -88,7 +88,7 @@
               <h2 class="text-white lg:text-xl font-semibold mb-2">
                 {certificate.title}
               </h2>
-              <p class="text-accent-500 w-fit font-semibold text-sm bg-white rounded-full p-1 px-2 mb-auto">
+              <p class="text-accent-500 w-fit font-semibold text-sm bg-white rounded-full p-1 px-2 mt-auto">
                 {certificate.type}
               </p>
               <p class="text-white ">{certificate.org}</p>
