@@ -13,7 +13,7 @@
   import PythonIcon from "./svg/PythonIcon.svelte";
   import ReactIcon from "./svg/ReactIcon.svelte";
   import SvelteIcon from "./svg/SvelteIcon.svelte";
-  import TailwindIcon from "./svg/Tailwindicon.svelte";
+  import TailwindIcon from "./svg/TailwindIcon.svelte";
   import VscodeIcon from "./svg/VscodeIcon.svelte";
   import CssIcon from "./svg/CssIcon.svelte";
   import DjangoIcon from "./svg/DjangoIcon.svelte";
