@@ -18,6 +18,7 @@
   on:keydown={(e) => {
     if (e.key === "Escape") dialog.close();
   }}
+  class="border-none p-0 rounded-lg   max-w-[32rem]" 
 >
   <div class={class_}>
     <div class="flex">
@@ -34,12 +35,6 @@
 </dialog>
 
 <style>
-  dialog {
-    max-width: 32em;
-    border-radius: 0.2em;
-    border: none;
-    padding: 0;
-  }
   dialog::backdrop {
     background: rgba(0, 0, 0, 0.3);
   }

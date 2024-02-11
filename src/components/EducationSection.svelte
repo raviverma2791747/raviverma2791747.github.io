@@ -22,7 +22,7 @@
     <AnimatedComponent>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-4">
         {#each $education_store as education, index}
-          <div class="flex flex-col h-96 lg:h-80">
+          <div class="flex flex-col h-[30rem]  lg:h-80">
             {#if index % 2 == 0}
               <div
                 class="h-[40%] border-l border-accent-500 p-4 relative animate-flip-up animate-once"
