@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tailwindcss/line-clamp": "^0.4.4",
 		"nodemailer": "^6.9.9",
 		"svelte-inview": "^4.0.2",
 		"tailwindcss-animated": "^1.0.1"
